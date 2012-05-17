@@ -1,0 +1,11 @@
+[user]
+	name = Rafael Bandeira
+	email = rafaelbandeira3@gmail.com
+
+[alias]
+  df = diff --color
+  st = status -s
+  pr = pull --rebase
+
+[color]
+  ui = auto
