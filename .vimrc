@@ -11,11 +11,14 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 
 Bundle 'altercation/solarized', {'rtp': 'vim-colors-solarized/'}
+Bundle 'molokai'
+Bundle 'mattn/gist-vim'
 
 Bundle 'ervandew/supertab'
 
-Bundle 'https://github.com/jondistad/vimclojure'
-Bundle 'https://github.com/bbommarito/vim-slim.git'
+Bundle 'vim-coffee-script'
+Bundle 'jondistad/vimclojure'
+Bundle 'bbommarito/vim-slim'
 
 filetype plugin indent on
 
@@ -35,8 +38,6 @@ set scrolloff=4
 set hidden
 
 set mouse=a
-
-set guifont=Inconsolata\ Bold\ 9
 
 let mapleader = ","
 let g:mapleader = ","
