@@ -12,11 +12,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-COMMAND_PROMPT="
-%b@%n in %B%~%b 
+PATH="$HOME/bin:$PATH"
 
-%B%F{green}%# ~> %b"
-
-export PS1="${COMMAND_PROMPT}"
-
-source "$HOME/.rvm/src/rvm/scripts/rvm"
+for file in `ls $HOME/.zsh-init`; do
+  source "$HOME/.zsh-init/$file"
+done
