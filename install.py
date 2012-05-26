@@ -10,11 +10,25 @@ def dstpath(file):
   return os.path.join(os.environ["HOME"], '.' + file) 
 
 def shouldcopy(file):
-  return (not file.startswith('.') 
+  return (
+         not file.startswith('.') 
+         and not file == 'install.py'
          and not file.endswith('.swp')
-         and not os.path.isdir(srcpath(file)))
+         )
 
-for dotfile in os.listdir('.'):
-  if shouldcopy(dotfile):
-    print 'copying ' + dotfile
-    shutil.copy(srcpath(dotfile), dstpath(dotfile))    
+def isdir(file):
+  return os.path.isdir(file)
+
+def cpfiles(files, basepath=''):
+  for dotfile in files:
+    if shouldcopy(dotfile):
+      print 'copying ' + basepath + '.' + dotfile
+      src = srcpath(basepath + dotfile)
+      dst = dstpath(basepath + dotfile)
+
+      if isdir(src):
+        cpfiles(os.listdir(src), dotfile + '/')
+      else: 
+        shutil.copy(src, dst)    
+
+cpfiles(os.listdir('.'))
