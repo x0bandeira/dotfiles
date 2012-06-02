@@ -1,6 +1,9 @@
 set nocompatible
 filetype off
 
+syntax on
+filetype plugin indent on
+
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
@@ -17,11 +20,13 @@ Bundle 'mattn/gist-vim'
 Bundle 'ervandew/supertab'
 
 Bundle 'vim-coffee-script'
-Bundle 'jondistad/vimclojure'
+Bundle 'VimClojure'
 Bundle 'bbommarito/vim-slim'
 
-filetype plugin indent on
+" Clojure
+let vimclojure#ParenRainbow=1
 
+" Defaults
 set number 
 set expandtab 
 set tabstop=2
@@ -66,6 +71,6 @@ map <leader>t :FufCoverageFile<cr>
 "  set statusline=%t\ [%l,%c]\ \ \ \ \ \ %{RepoInfo()}\ %m
 "end
 
-autocmd BufNewFile,BufRead *.scss setfiletype css
-autocmd BufNewFile,BufRead *.clj setfiletype clojure
-autocmd BufNewFile,BufRead *.slim setfiletype slim
+autocmd BufNewFile,BufRead *.scss set filetype=css
+autocmd BufNewFile,BufRead *.clj set filetype=clojure
+autocmd BufNewFile,BufRead *.slim set filetype=slim
