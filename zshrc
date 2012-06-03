@@ -12,7 +12,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-PATH="$HOME/bin:$PATH"
+PATH="$PATH:$HOME/bin"
 
 for file in `ls $HOME/.zsh-init`; do
   source "$HOME/.zsh-init/$file"

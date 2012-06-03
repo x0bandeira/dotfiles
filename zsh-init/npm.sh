@@ -1,2 +1,2 @@
-PATH="node_modules/.bin:$PATH"
+PATH="$PATH:node_modules/.bin"
 
