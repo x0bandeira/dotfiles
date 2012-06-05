@@ -20,6 +20,7 @@ Bundle 'mattn/gist-vim'
 Bundle 'ervandew/supertab'
 
 Bundle 'vim-coffee-script'
+Bundle 'gkz/vim-ls'
 Bundle 'VimClojure'
 Bundle 'bbommarito/vim-slim'
 
